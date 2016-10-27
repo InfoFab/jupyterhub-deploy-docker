@@ -1,5 +1,7 @@
 {
-    "acceptedResourceRoles": [],
+    "acceptedResourceRoles": ["slave_public"],
+    "cpus": 1,
+    "mem": 32,
     "args": [
         "jupyterhub",
         "-f",
