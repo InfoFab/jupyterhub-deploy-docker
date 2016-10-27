@@ -1,0 +1,42 @@
+{
+    "acceptedResourceRoles": [],
+    "args": [
+        "jupyterhub",
+        "-f",
+        "/srv/jupyterhub/jupyterhub_config.py"
+    ],
+    "container": {
+        "docker": {
+            "forcePullImage": true,
+            "image": "jupyterhub",
+            "network": "BRIDGE",
+            "portMappings": [
+                {
+                    "containerPort": 443,
+                    "hostPort": 443,
+                    "protocol": "tcp"
+                }
+            ]
+        },
+        "type": "DOCKER",
+        "volumes": [
+            {
+                "containerPath": "${DATA_VOLUME_CONTAINER}",
+                "hostPath": "data",
+                "mode": "RW"
+            }
+        ]
+    },
+    "env": {
+        "DOCKER_NETWORK_NAME": "${DOCKER_NETWORK_NAME}",
+        "DOCKER_NOTEBOOK_DIR": "${DOCKER_NOTEBOOK_DIR}",
+        "DOCKER_NOTEBOOK_IMAGE": "${DOCKER_NOTEBOOK_IMAGE}",
+        "DOCKER_SPAWN_CMD": "${DOCKER_SPAWN_CMD}",
+        "GITHUB_CLIENT_ID": "${GITHUB_CLIENT_ID}",
+        "GITHUB_CLIENT_SECRET": "${GITHUB_CLIENT_SECRET}",
+        "OAUTH_CALLBACK_URL": "${OAUTH_CALLBACK_URL}"
+    },
+    "fetch": [],
+    "id": "hub",
+    "requirePorts": true
+}
