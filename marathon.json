@@ -8,7 +8,7 @@
     "container": {
         "docker": {
             "forcePullImage": true,
-            "image": "jupyterhub",
+            "image": "r96941046/jupyterhubdcos",
             "network": "BRIDGE",
             "portMappings": [
                 {
