@@ -21,20 +21,20 @@
         "type": "DOCKER",
         "volumes": [
             {
-                "containerPath": "${DATA_VOLUME_CONTAINER}",
+                "containerPath": "data",
                 "hostPath": "data",
                 "mode": "RW"
             }
         ]
     },
     "env": {
-        "DOCKER_NETWORK_NAME": "${DOCKER_NETWORK_NAME}",
-        "DOCKER_NOTEBOOK_DIR": "${DOCKER_NOTEBOOK_DIR}",
-        "DOCKER_NOTEBOOK_IMAGE": "${DOCKER_NOTEBOOK_IMAGE}",
-        "DOCKER_SPAWN_CMD": "${DOCKER_SPAWN_CMD}",
-        "GITHUB_CLIENT_ID": "${GITHUB_CLIENT_ID}",
-        "GITHUB_CLIENT_SECRET": "${GITHUB_CLIENT_SECRET}",
-        "OAUTH_CALLBACK_URL": "${OAUTH_CALLBACK_URL}"
+        "DOCKER_NETWORK_NAME": "BRIDGE",
+        "DOCKER_NOTEBOOK_DIR": "/home/jovyan/work",
+        "DOCKER_NOTEBOOK_IMAGE": "jupyter/scipy-notebook:2d878db5cbff",
+        "DOCKER_SPAWN_CMD": "start-singleuser.sh",
+        "GITHUB_CLIENT_ID": "abb9add51b36be7e4016",
+        "GITHUB_CLIENT_SECRET": "65058166f576d5aca64c61aa88eb9a3c87c2736d",
+        "OAUTH_CALLBACK_URL": "https://cloud365twagents.southeastasia.cloudapp.azure.com/hub/oauth_callback"
     },
     "fetch": [],
     "id": "hub",
