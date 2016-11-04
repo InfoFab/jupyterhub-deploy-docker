@@ -23,7 +23,7 @@
         "type": "DOCKER",
         "volumes": [
             {
-                "containerPath": "data",
+                "containerPath": “/data",
                 "hostPath": "data",
                 "mode": "RW"
             }
