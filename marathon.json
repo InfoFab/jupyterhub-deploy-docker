@@ -23,8 +23,16 @@
         "type": "DOCKER",
         "volumes": [
             {
-                "containerPath": “/data",
-                "hostPath": "data",
+                "containerPath": "mydata",
+                "mode": "RW",
+                "persistent": {
+                    "type": "root",
+                    "size": 1000
+                }
+            },
+            {
+                "containerPath": "/data",
+                "hostPath": "mydata",
                 "mode": "RW"
             }
         ]
