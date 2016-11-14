@@ -1,5 +1,5 @@
 {
-    "acceptedResourceRoles": ["slave_public"],
+    "acceptedResourceRoles": ["*"],
     "cpus": 1,
     "mem": 32,
     "args": [
