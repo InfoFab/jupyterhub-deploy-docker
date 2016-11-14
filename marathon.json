@@ -14,9 +14,9 @@
             "network": "BRIDGE",
             "portMappings": [
                 {
+                    "hostPort": 0,
                     "containerPort": 443,
-                    "hostPort": 443,
-                    "protocol": "tcp"
+                    "servicePort": 10001
                 }
             ]
         },
