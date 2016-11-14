@@ -48,5 +48,10 @@
     },
     "fetch": [],
     "id": "hub",
-    "requirePorts": true
+    "requirePorts": true,
+    "labels":{
+        "HAPROXY_GROUP":"external",
+        "HAPROXY_0_VHOST":"cloud365twagents.southeastasia.cloudapp.azure.com",
+        "HAPROXY_0_MODE":"http"
+    }
 }
